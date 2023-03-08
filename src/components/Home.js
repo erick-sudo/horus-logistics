@@ -14,7 +14,7 @@ function Home() {
 function SlideShow() {
 
     const slides = [h1, h2, h3, h1, h2, h3]
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = useState(2)
 
     useEffect(() => {
         // setInterval(() =>{

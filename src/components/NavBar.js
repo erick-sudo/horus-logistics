@@ -4,8 +4,7 @@ import { NavLink } from "react-router-dom";
 import { FaHome, FaHamburger, FaWindowClose, FaWarehouse } from 'react-icons/fa'
 import { GiDeliveryDrone, GiShieldBash } from 'react-icons/gi'
 import { MdEmojiTransportation, MdOutlineConnectWithoutContact } from 'react-icons/md'
-
-//<div className="close-services"><FaWindowClose /></div>
+import { IoPeopleCircleOutline } from 'react-icons/io5'
 
 function NavBar() {
 
@@ -15,6 +14,7 @@ function NavBar() {
     return (
       <div className="nav">
         <Logo size={150} />
+        {!showNav ? <div className="show-nav" onClick={() => setShowNav(true)}><FaHamburger /></div> : null}
         <div className="services-L">
           <NavLink to={""}>..<FaHome />..</NavLink>
           <NavLink to={""}>Deliveries</NavLink>
@@ -22,15 +22,16 @@ function NavBar() {
           <NavLink to={""}>Ware Housing</NavLink>
           <NavLink to={""}>Special Equipment</NavLink>
         </div>
-        <div className="services-P">
+        { showNav ? <div className="services-P">
+          <div className="close-services" onClick={() => setShowNav(false)}><FaWindowClose /></div>
           <NavLink to={""}><FaHome /> Home</NavLink>
           <NavLink to={""}><GiDeliveryDrone /> Deliveries</NavLink>
           <NavLink to={""}><MdEmojiTransportation /> Transportation</NavLink>
           <NavLink to={""}><FaWarehouse /> Ware Housing</NavLink>
           <NavLink to={""}><GiShieldBash /> Special Equipment</NavLink>
-          <NavLink to={""}><GiShieldBash /> About Us</NavLink>
+          <NavLink to={""}><IoPeopleCircleOutline /> About Us</NavLink>
           <NavLink to={""}><MdOutlineConnectWithoutContact /> Contact Us</NavLink>
-        </div>
+        </div> : null}
       </div>
     )
 }

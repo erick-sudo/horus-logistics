@@ -11,6 +11,9 @@
   .services-P {
     display: none;
   }
+  .show-nav {
+    display: none;
+  } 
   .services-L {
     flex-grow: 1;
     display: flex;
@@ -35,6 +38,27 @@
 }
 
 @media (orientation: portrait) {
+  .show-nav {
+    font-size: 1.7em;
+    border: solid 3px;
+    padding: 0.2em 0.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+  }
+  .show-nav:hover {
+    color: var(--fgA);
+  }
+  .close-services {
+    display: flex;
+    justify-content: right;
+    color: white;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  .close-services:hover {
+    color: var(--fgA);
+  }
   .services-L {
     display: none;
   }
@@ -59,6 +83,7 @@
   }
   .services-P > a:hover {
     background-color: var(--fgA);
+    color: black;
   }
 }
 
