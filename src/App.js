@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Warehousing from './components/Warehousing';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Location from './components/Location';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/home" element={<Home />} />
         </Routes>
       </div>
+      <Location />
       <Footer />
     </div>
   );

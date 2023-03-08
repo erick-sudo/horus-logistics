@@ -1,6 +1,7 @@
 :root {
   --fgA: #f28a0a;
   --bgT: #341f04f4;
+  --bgTA: #130c02d2;
 }
 .App {
   text-align: center;
@@ -13,8 +14,46 @@ button {
   color: white;
   border: solid 1px var(--fgA);
 }
-
+.main-services {
+  border: solid 1px;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.services-offered {
+  box-shadow: 0.2em 0.2em 0.2em var(--fgA);
+  font-weight: bolder;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  cursor: pointer;
+  margin: 0em 0.8em 0.8em 0em;
+}
+.services-offered > p {
+  background-color: white;
+  border-bottom-right-radius: 30px;
+  margin: 0;
+  padding: 0.5em;
+}
+.s-image {
+  position: relative;
+}
+.s-image > img {
+  width: 100%;
+  border-top-left-radius: 30px;
+  display: block;
+}
+.s-image > h1 {
+  position: absolute;
+  color: var(--fgA);
+  top: 1em;
+  right: 0;
+  left: 0;
+}
 @media (orientation: landscape) {
+  .services-offered{
+    width: 250px;
+  }
   .services-P {
     display: none;
   }
@@ -45,6 +84,10 @@ button {
 }
 
 @media (orientation: portrait) {
+  .services-offered{
+    min-width: 45%;
+    max-width: 45%;
+  }
   .show-nav {
     font-size: 1.7em;
     border: solid 3px;
@@ -121,6 +164,7 @@ button {
 /* Footer */
 .footer {
   background-color: rgb(45, 37, 22);
+  margin-top: 0;
 }
 .footer-logo {
   display: flex;
@@ -197,4 +241,9 @@ button {
 }
 .active-dot {
   background-color: black;
+}
+
+/* Location */
+.location-map {
+  padding: 0;
 }
