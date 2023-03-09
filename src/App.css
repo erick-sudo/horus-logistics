@@ -15,22 +15,31 @@ button {
   border: solid 1px var(--fgA);
 }
 .main-services {
-  border: solid 1px;
+  margin: 3em 0em;
   padding: 1em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 .services-offered {
-  box-shadow: 0.2em 0.2em 0.2em var(--fgA);
+  box-shadow: 0.2em 0.2em 0.2em rgba(231, 153, 10, 0.342);
   font-weight: bolder;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
   cursor: pointer;
   margin: 0em 0.8em 0.8em 0em;
+  display: flex;
+  flex-direction: column;
 }
-.services-offered > p {
+.s-description {
+  display: flex;
+  align-items: center;
   background-color: white;
+  border-bottom-right-radius: 30px;
+  min-height: 100px;
+  flex-grow: 1;
+}
+.s-description > p {
   border-bottom-right-radius: 30px;
   margin: 0;
   padding: 0.5em;
@@ -44,11 +53,14 @@ button {
   display: block;
 }
 .s-image > h1 {
+  font-size: 1.3em;
   position: absolute;
   color: var(--fgA);
   top: 1em;
   right: 0;
   left: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (orientation: landscape) {
   .services-offered{
@@ -143,6 +155,14 @@ button {
   margin: 0 auto;
 }
 
+.p {
+  width:90%;
+  padding: 1em;
+  background-color: var(--bgT);
+  margin: 0 auto;
+  color: white;
+}
+
 
 /* --------------------Logo-------------------- */
 .logo {
@@ -201,22 +221,34 @@ button {
 }
 .slide {
   width: 95%;
-  display: flex;
   align-items: center;
+  /* overflow: hidden; */
+  perspective: 800px;
+}
+.slide-image {
+  margin-bottom: 0;
   overflow: hidden;
 }
-.slide > img {
+.slide-image > img {
   width: 100%;
   display: block;
 }
+@keyframes fadeimagein {
+  from {
+    transform: rotate3d(0,2,0,90deg);
+  }
+  to{
+    opacity: 1;
+  }
+}
 .float-description {
   position: absolute;
-  top: 0.4em;
-  left: 0.2em;
-  right: 0.2em;
-  padding-bottom: 1em;
+  top: 0;
+  right: 0;
+  left: 0;
   color: white;
   background-color: rgba(0, 0, 0, 0.45);
+  padding-bottom: 1em;
 }
 .float-description h1 {
   color: var(--fgA);
