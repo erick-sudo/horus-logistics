@@ -7,14 +7,53 @@ import aircraft from '../assets/gallery/travel/aircraft.jpg'
 import excavator from '../assets/gallery/construction/excavator.jpg'
 import nurse from '../assets/gallery/hospitality/nurse.jpg'
 import truck from '../assets/gallery/shipping/truck.jpg'
+import logistics  from '../assets/gallery/logistics.png'
+import { GiCheckMark } from 'react-icons/gi'
 
 function Home() {
+
     return (
         <div className="home">
-            <SlideShow />
+            <SlideShow images={[h1,h2,h3]}>
+                        <h1>FREIGHT FORWARDING</h1>
+                        <h2>WHEREVER IT NEEDS TO GO</h2>
+                        <div className="slide-line"></div>
+                        <div className="key-obligations">
+                            <div className="h4"><span className="ticks"><GiCheckMark /></span> Order Processing</div>
+                            <div className="h4"><span className="ticks"><GiCheckMark /></span> Materials Handling</div>
+                            <div className="h4"><span className="ticks"><GiCheckMark /></span> Warehousing</div>
+                            <div className="h4"><span className="ticks"><GiCheckMark /></span> Inventory Management</div>
+                            <div className="h4"><span className="ticks"><GiCheckMark /></span> Transportation</div>
+                            <div className="h4"><span className="ticks"><GiCheckMark /></span> Packaging</div>
+                            <div className="h4"><span className="ticks"><GiCheckMark /></span> Monitoring</div>
+                        </div>
+                        <div className="slide-line"></div>
+                        <h4>YOUR SOURCE FOR LOGISTICS FOR MORE THAN 20 YEARS</h4>
+                        <button className="contact-us">Contact Us</button>
+            </SlideShow>
             <div className="p">
                 <h1>Your Reliable Logistics Company</h1>
+                <div className="slide-line"></div>
                 <p>When it comes to your freight, it is imperative that you know where it is, where it is going, and that it is going to get there on time and safely. That is why so many companies turn to WTL when they are in need of a reliable transportation and distribution company.</p>
+                <p>With more than 20 years of distribution service experience, we provide exceptional local, regional, and national distribution and warehouse services to businesses.</p>
+                <div className="responsibilities-div">
+                    <div className="res-image">
+                        <img src={logistics} alt="logistics" />
+                    </div>
+                    <div className="responsibilities">
+                        <h2><a href="http://www.">Lets discuss:</a></h2>
+                        <div className="slide-line"></div>
+                        <ul>
+                            <li>International Shipping (Air or Sea)</li>
+                            <li>Continental U.S. Shipping (Air, Land, or Sea)</li>
+                            <li>Warehousing Services</li>
+                            <li>Local Cartage Services for Door-to-Door</li>
+                            <li>Delivery</li>
+                            <li>Trade Show Exhibit Pickup & Delivery Services</li>
+                            <li>& Much More...!</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div className="main-services">
                 <Service title="Travel" description="Travel. Your money will return. Your time won’t.Live life with no excuses, travel with no regret." image={aircraft} />
@@ -41,25 +80,25 @@ function Service({title, description, image}) {
     )
 }
 
-function SlideShow() {
+function SlideShow({children, images}) {
 
-    const slides = [h1, h2, h3, h1, h2, h3]
-    const [index, setIndex] = useState(2)
+    const slides = images
+    const [index, setIndex] = useState(1)
 
     const [calc, setCalc] = useState(100)
 
     const imageWrapper = useRef()
     const floatDesc = useRef()
+    const imageRef = useRef()
 
     function resizeWrapper(newvalue) {
         setCalc(newvalue)
     }
 
     useEffect(() => {
-        setCalc((floatDesc.current.offsetHeight))
-        imageWrapper.current.style.height = calc+"px"
+        resizeWrapper(floatDesc.current.offsetHeight)
         window.addEventListener('resize', () => {
-            resizeWrapper(floatDesc.current.offsetHeight*1.4)
+            resizeWrapper(floatDesc.current.offsetHeight*1)
         })
     },[]) 
 
@@ -71,13 +110,9 @@ function SlideShow() {
         <div className="slide-show-wrapper">
             <div className="slide-show">
                 <div className="slide" key={index}>
-                    <div ref={imageWrapper} className="slide-image"><img src={slides[index]} alt="Slide" /></div>
+                    <div ref={imageWrapper} className="slide-image"><img ref={imageRef} src={slides[index]} alt="Slide" /></div>
                     <div ref={floatDesc} className="float-description">
-                        <h1>FREIGHT FORWARDING</h1>
-                        <h2>WHEREVER IT NEEDS TO GO</h2>
-                        <div className="slide-line"></div>
-                        <h4>YOUR SOURCE FOR LOGISTICS FOR MORE THAN 20 YEARS</h4>
-                        <button className="contact-us">Contact Us</button>
+                        { children }
                     </div>
                 </div>
             </div>
@@ -92,4 +127,4 @@ function SlideShow() {
     )
 }
 
-export default Home;
+export { Home, SlideShow }

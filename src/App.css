@@ -15,7 +15,7 @@ button {
   border: solid 1px var(--fgA);
 }
 .main-services {
-  margin: 3em 0em;
+  margin: 3em auto;
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -63,6 +63,10 @@ button {
   text-overflow: ellipsis;
 }
 @media (orientation: landscape) {
+  .slide-image > img {
+    width: 100%;
+    display: block;
+  }
   .services-offered{
     width: 250px;
   }
@@ -96,6 +100,10 @@ button {
 }
 
 @media (orientation: portrait) {
+  .slide-image > img {
+    height: 100%;
+    display: block;
+  }
   .services-offered{
     min-width: 45%;
     max-width: 45%;
@@ -156,7 +164,6 @@ button {
 }
 
 .p {
-  width:90%;
   padding: 1em;
   background-color: var(--bgT);
   margin: 0 auto;
@@ -209,18 +216,54 @@ button {
 .home {
   
 }
-
+.responsibilities-div {
+  display: flex;
+  align-items: center;
+}
+.res-image {
+  width: 50%;
+}
+.res-image > img {
+  width: 100%;
+  display: block;
+}
+.responsibilities li {
+  text-align: left;
+}
+.responsibilities > h2 > a {
+  text-decoration: none;
+}
+.responsibilities > h2 > a:hover {
+  color: gray;
+}
 /* SlideShow */
+.key-obligations {
+  background-color: rgba(0, 0, 0, 0.481);
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.h4 {
+  font-weight: bolder;
+  padding: 2px;
+  text-align: left;
+  width: 90%;
+  display: flex;
+}
+.ticks {
+  display: block;
+  color: var(--fgA);
+  transform: scale(0.6);
+}
 .slide-show-wrapper {
-  
 }
 .slide-show {
   position: relative;
-  display: flex;
-  justify-content: center;
 }
 .slide {
-  width: 95%;
   align-items: center;
   /* overflow: hidden; */
   perspective: 800px;
@@ -228,10 +271,6 @@ button {
 .slide-image {
   margin-bottom: 0;
   overflow: hidden;
-}
-.slide-image > img {
-  width: 100%;
-  display: block;
 }
 @keyframes fadeimagein {
   from {
