@@ -80,6 +80,15 @@ button {
   border-radius: 10px;
 }
 @media (orientation: landscape) {
+  .contact-form{
+    flex-direction: row;
+  }
+  .c-image {
+    width: 50%;
+  }
+  .contact-form form {
+    width: 50%;
+  }
   .social{
     flex-direction: row;
   }
@@ -120,6 +129,15 @@ button {
 }
 
 @media (orientation: portrait) {
+  .contact-form {
+    flex-direction: column;
+  }
+  .c-image {
+    width: 100%;
+  }
+  .contact-form form {
+    width: 100%;
+  }
   .social {
     flex-direction: column;
   }
@@ -416,4 +434,88 @@ em {
 /* Location */
 .location-map {
   padding: 0;
+}
+
+/* ------------------------------------------ */
+input, textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+/* ------------------------------------------ */
+
+/* Contact Us */
+.contactus > h1 {
+  color: var(--fgA);
+  text-shadow: 0.04em 0.04em 0.04em black;
+}
+.contact-form {
+  display: flex;
+}
+.c-image{
+  display: flex;
+  align-items: center;
+}
+.c-image img {
+  width: 100%;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  justify-content: center;
+}
+.fields{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.fields input, textarea{
+  width: 100%;
+  background-color: gray;
+  color: rgb(43, 31, 7);
+  font-weight: bolder;
+  padding: 1em;
+}
+.contact-form form input[type="submit"] {
+  background-color: orange;
+  width: max-content;
+  margin: 1em auto;
+  padding: 1em 2em;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.contact-form form input[type="submit"]:hover {
+  background-color: blue;
+  color: white;
+}
+
+.getintouch {
+  position: relative;
+  max-width: 500px;
+  margin: 2em auto;
+  border: solid 1px;
+}
+#one {
+  background-color: rgb(79, 207, 227);
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: bolder;
+  border: solid 6px orange;
+  padding: 1em;
+}
+#two{
+  border: solid 10px white;
+  width: max-content
+}
+#three {
+  border: solid 6px orange;
+  width: max-content
+}
+#one, #two, #three {
+  border-radius: 50%;
 }
