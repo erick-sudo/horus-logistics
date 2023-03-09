@@ -5,7 +5,11 @@ function Warehousing() {
     return (
         <div className="warehousing">
             <h1>Comprehensive Warehousing & Distribution Services</h1>
-            <SlideShow images={[]}></SlideShow>
+            <SlideShow images={[]}>
+                <div style={{minHeight: "500px"}}>
+                    
+                </div>
+            </SlideShow>
         </div>
     )
 }

@@ -2,6 +2,8 @@
   --fgA: #f28a0a;
   --bgT: #341f04f4;
   --bgTA: #130c02d2;
+  --bgTB: #1c2338ba;
+  --bgST: #b86603;
 }
 .App {
   text-align: center;
@@ -22,19 +24,19 @@ button {
   flex-wrap: wrap;
 }
 .services-offered {
-  box-shadow: 0.2em 0.2em 0.2em rgba(231, 153, 10, 0.342);
+  box-shadow: 0.2em 0.2em 0.2em black;
   font-weight: bolder;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
   cursor: pointer;
-  margin: 0em 0.8em 0.8em 0em;
+  margin: 0em 0.95em 0.95em 0em;
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(-270deg, var(--bgST), transparent);
 }
 .s-description {
   display: flex;
   align-items: center;
-  background-color: white;
   border-bottom-right-radius: 30px;
   min-height: 100px;
   flex-grow: 1;
@@ -51,11 +53,12 @@ button {
   width: 100%;
   border-top-left-radius: 30px;
   display: block;
+  transform: scale(0.9);
 }
 .s-image > h1 {
-  font-size: 1.3em;
+  font-size: 1.4em;
   position: absolute;
-  color: var(--fgA);
+  color: black;
   top: 1em;
   right: 0;
   left: 0;
@@ -163,11 +166,17 @@ button {
   margin: 0 auto;
 }
 
+.p_w {
+  background: url("./assets/logistics1.png") black no-repeat right center;
+  background-size: 200px;
+}
+
 .p {
   padding: 1em;
-  background-color: var(--bgT);
   margin: 0 auto;
   color: white;
+  background-color: var(--bgTB);
+  font-weight: bolder;
 }
 
 

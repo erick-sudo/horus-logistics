@@ -3,11 +3,11 @@ import h1 from "../assets/gallery/horus1.jpg"
 import h2 from "../assets/gallery/horus2.jpg"
 import h3 from "../assets/gallery/horus3.jpg"
 
-import aircraft from '../assets/gallery/travel/aircraft.jpg'
-import excavator from '../assets/gallery/construction/excavator.jpg'
-import nurse from '../assets/gallery/hospitality/nurse.jpg'
-import truck from '../assets/gallery/shipping/truck.jpg'
-import logistics  from '../assets/gallery/logistics.png'
+import aircraft from '../assets/gallery/travel/flying.png'
+import excavator from '../assets/gallery/construction/bulldozzer.png'
+import nurse from '../assets/gallery/hospitality/hospitality1.png'
+import truck from '../assets/gallery/shipping/truck.png'
+import logistics  from '../assets/gallery/logistics1.png'
 import { GiCheckMark } from 'react-icons/gi'
 
 function Home() {
@@ -31,27 +31,29 @@ function Home() {
                         <h4>YOUR SOURCE FOR LOGISTICS FOR MORE THAN 20 YEARS</h4>
                         <button className="contact-us">Contact Us</button>
             </SlideShow>
-            <div className="p">
-                <h1>Your Reliable Logistics Company</h1>
-                <div className="slide-line"></div>
-                <p>When it comes to your freight, it is imperative that you know where it is, where it is going, and that it is going to get there on time and safely. That is why so many companies turn to WTL when they are in need of a reliable transportation and distribution company.</p>
-                <p>With more than 20 years of distribution service experience, we provide exceptional local, regional, and national distribution and warehouse services to businesses.</p>
-                <div className="responsibilities-div">
-                    <div className="res-image">
-                        <img src={logistics} alt="logistics" />
-                    </div>
-                    <div className="responsibilities">
-                        <h2><a href="http://www.">Lets discuss:</a></h2>
-                        <div className="slide-line"></div>
-                        <ul>
-                            <li>International Shipping (Air or Sea)</li>
-                            <li>Continental U.S. Shipping (Air, Land, or Sea)</li>
-                            <li>Warehousing Services</li>
-                            <li>Local Cartage Services for Door-to-Door</li>
-                            <li>Delivery</li>
-                            <li>Trade Show Exhibit Pickup & Delivery Services</li>
-                            <li>& Much More...!</li>
-                        </ul>
+            <div className="p_w">
+                <div className="p">
+                    <h1>Your Reliable Logistics Company</h1>
+                    <div className="slide-line"></div>
+                    <p>When it comes to your freight, it is imperative that you know where it is, where it is going, and that it is going to get there on time and safely. That is why so many companies turn to WTL when they are in need of a reliable transportation and distribution company.</p>
+                    <p>With more than 20 years of distribution service experience, we provide exceptional local, regional, and national distribution and warehouse services to businesses.</p>
+                    <div className="responsibilities-div">
+                        <div className="res-image">
+                            <img src={logistics} alt="logistics" />
+                        </div>
+                        <div className="responsibilities">
+                            <h2><a href="http://www.">Lets discuss:</a></h2>
+                            <div className="slide-line"></div>
+                            <ul>
+                                <li>International Shipping (Air or Sea)</li>
+                                <li>Continental U.S. Shipping (Air, Land, or Sea)</li>
+                                <li>Warehousing Services</li>
+                                <li>Local Cartage Services for Door-to-Door</li>
+                                <li>Delivery</li>
+                                <li>Trade Show Exhibit Pickup & Delivery Services</li>
+                                <li>& Much More...!</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
