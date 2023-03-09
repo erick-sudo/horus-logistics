@@ -16,22 +16,23 @@ function NavBar() {
         <Logo size={150} />
         {!showNav ? <div className="show-nav" onClick={() => setShowNav(true)}><FaHamburger /></div> : null}
         <div className="services-L">
-          <NavLink to={""}>..<FaHome />..</NavLink>
-          <NavLink to={""}>Deliveries</NavLink>
-          <NavLink to={""}>Transportation</NavLink>
+          <NavLink to={"/"}>..<FaHome />..</NavLink>
+          <NavLink to={"/deliveries"}>Deliveries</NavLink>
+          <NavLink to={"/transportation"}>Transportation</NavLink>
           <NavLink to={"/warehousing"}>Ware Housing</NavLink>
-          <NavLink to={""}>Special Equipment</NavLink>
+          <NavLink to={"/special"}>Special Equipment</NavLink>
+          <NavLink to={"/contactus"}>Contact Us</NavLink>
         </div>
         { showNav ? <div className="services-P">
           <div className="close-services" onClick={() => setShowNav(false)}><FaWindowClose /></div>
           <Logo size={60} />
-          <NavLink to={""}><FaHome /> Home</NavLink>
-          <NavLink to={""}><GiDeliveryDrone /> Deliveries</NavLink>
-          <NavLink to={""}><MdEmojiTransportation /> Transportation</NavLink>
+          <NavLink to={"/"}><FaHome /> Home</NavLink>
+          <NavLink to={"/deliveries"}><GiDeliveryDrone /> Deliveries</NavLink>
+          <NavLink to={"/transportation"}><MdEmojiTransportation /> Transportation</NavLink>
           <NavLink to={"/warehousing"}><FaWarehouse /> Ware Housing</NavLink>
-          <NavLink to={""}><GiShieldBash /> Special Equipment</NavLink>
-          <NavLink to={""}><IoPeopleCircleOutline /> About Us</NavLink>
-          <NavLink to={""}><MdOutlineConnectWithoutContact /> Contact Us</NavLink>
+          <NavLink to={"/special"}><GiShieldBash /> Special Equipment</NavLink>
+          <NavLink to={"/aboutus"}><IoPeopleCircleOutline /> About Us</NavLink>
+          <NavLink to={"/contactus"}><MdOutlineConnectWithoutContact /> Contact Us</NavLink>
         </div> : null}
       </div>
     )

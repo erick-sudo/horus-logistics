@@ -3,6 +3,8 @@ import h1 from "../assets/gallery/horus1.jpg"
 import h2 from "../assets/gallery/horus2.jpg"
 import h3 from "../assets/gallery/horus3.jpg"
 
+import { useNavigate } from "react-router-dom";
+
 import aircraft from '../assets/gallery/travel/flying.png'
 import excavator from '../assets/gallery/construction/bulldozzer.png'
 import nurse from '../assets/gallery/hospitality/hospitality1.png'
@@ -11,6 +13,8 @@ import logistics  from '../assets/gallery/logistics1.png'
 import { GiCheckMark } from 'react-icons/gi'
 
 function Home() {
+
+    const navigate = useNavigate()
 
     return (
         <div className="home">
@@ -29,7 +33,7 @@ function Home() {
                         </div>
                         <div className="slide-line"></div>
                         <h4>YOUR SOURCE FOR LOGISTICS FOR MORE THAN 20 YEARS</h4>
-                        <button className="contact-us">Contact Us</button>
+                        <button className="contact-us" onClick={() => navigate("/contactus")}>Contact Us</button>
             </SlideShow>
             <div className="p_w">
                 <div className="p">
