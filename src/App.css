@@ -80,6 +80,13 @@ button {
   border-radius: 10px;
 }
 @media (orientation: landscape) {
+  .m-icon img {
+    height: 20vh !important;
+    transform: scale(0.7);
+  }
+  #start-consultation {
+    margin-left: 1.5em !important;
+  }
   .c-float {
     flex-wrap: nowrap;
   }
@@ -136,6 +143,9 @@ button {
 }
 
 @media (orientation: portrait) {
+  .consultation {
+    flex-direction: column;
+  }
   .c-float{
     flex-wrap: wrap;
   }
@@ -548,22 +558,49 @@ input, textarea {
   font-weight: bolder;
 }
 #askquestion:hover {
-  background-color: gray;
+  background-color: blue;
   border: solid 1px var(--fgA);
 }
 .meetings {
   width: 97%;
   margin: 0 auto;
   margin-bottom: 2em;
-  border: solid 1px;
 
   display: flex;
   justify-content: center;
 }
-.meeting, .consultation {
+.consultation-wrapper {
   margin: 0.5em;
   width: 50%;
   height: 200px;
-  background-color: gray;
-  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  padding: 5px;
+}
+.consultation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px var(--fgA);
+}
+#start-consultation {
+  padding: 10px;
+  background-color: black;
+  box-shadow: 0.04em 0.04em 0.4em white;
+  color: white;
+  display: flex;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#start-consultation:hover {
+  background-color: blue;
+}
+.m-icon {
+  width: max-content;
+}
+.arrow-R {
+  color: orange;
+  font-size: 1.2em;
 }
