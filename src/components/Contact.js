@@ -1,12 +1,43 @@
 import React from "react";
 import contact from "../assets/gallery/contacts/contact_bulb.png"
 import { TbPhoneCall } from 'react-icons/tb'
-import { HiBuildingOffice2 } from 'react-icons/hi'
+import { ImOffice, ImWhatsapp } from 'react-icons/im'
+import { FcQuestions, FcFaq } from 'react-icons/fc'
 
 function Contact() {
     return (
         <div className="contactus">
             <h1>Contact Us</h1>
+            <div className="c-float">
+                <div className="direct-contacts">
+                    <div className="c-icons"><ImOffice /></div>
+                    <div className="c-info">
+                        <div className="hd">Corporate Office Address</div>
+                        <p>Moi Avenue, opposite Veteran House Nairobi KE</p>
+                    </div>
+                </div>
+                <div className="direct-contacts">
+                    <div  className="c-icons"><TbPhoneCall /></div>
+                    <div className="c-info">
+                        <div className="hd">Direct Call</div>
+                        <p>+254758986475<br />+555-233-345</p>
+                    </div>
+                </div>
+                <div className="direct-contacts">
+                    <div  className="c-icons"><ImWhatsapp /></div>
+                    <div className="c-info">
+                        <div className="hd">Whatsapp Chats, Voice & Video calls</div>
+                        <p>+254758986475<br />+555-233-345</p>
+                    </div>
+                </div>
+                <div className="direct-contacts">
+                    <div  className="c-icons"><FcFaq /></div>
+                    <div className="c-info">
+                        <p className="hd">Ask Question Here</p>
+                        <button id="askquestion">Ask Question</button>
+                    </div>
+                </div>
+            </div>
             <div className="contact-form">
                 <div className="c-image">
                     <img src={contact} alt="Contact" />
@@ -31,18 +62,13 @@ function Contact() {
                     <input type="submit" value="Submit" />
                 </form>
             </div>
-            <div className="getintouch">
-                <div id="four">
-                    <div id="three">
-                        <div id="two">
-                            <div id="one">Get<br />In<br /> Touch</div>
-                        </div>
-                    </div>
+
+            <div className="meetings">
+                <div className="meeting">
+
                 </div>
-                <div>
-                    <div className="floats f1"></div>
-                    <div className="floats f2"></div>
-                    <div className="floats f3"></div>
+                <div className="consultation">
+
                 </div>
             </div>
         </div>

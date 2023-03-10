@@ -80,6 +80,13 @@ button {
   border-radius: 10px;
 }
 @media (orientation: landscape) {
+  .c-float {
+    flex-wrap: nowrap;
+  }
+  .direct-contacts {
+    min-width: 20%;
+    max-width: 20%;
+  }
   .contact-form{
     flex-direction: row;
   }
@@ -129,6 +136,13 @@ button {
 }
 
 @media (orientation: portrait) {
+  .c-float{
+    flex-wrap: wrap;
+  }
+  .direct-contacts {
+    min-width: 42%;
+    max-width: 42%;
+  }
   .contact-form {
     flex-direction: column;
   }
@@ -450,7 +464,13 @@ input, textarea {
   text-shadow: 0.04em 0.04em 0.04em black;
 }
 .contact-form {
+  width: 97%;
+  margin: 1em auto;
+  margin-top: -2em;
+  padding-top: 2em;
   display: flex;
+  background-color: white;
+  box-shadow: 0.04em 0.04em 0.4em black;
 }
 .c-image{
   display: flex;
@@ -469,6 +489,7 @@ input, textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 10px;
 }
 .fields input, textarea{
   width: 100%;
@@ -490,32 +511,59 @@ input, textarea {
   background-color: blue;
   color: white;
 }
-
-.getintouch {
-  position: relative;
-  max-width: 500px;
-  margin: 2em auto;
-  border: solid 1px;
-}
-#one {
-  background-color: rgb(79, 207, 227);
-  width: max-content;
+.c-float {
   display: flex;
   justify-content: center;
+}
+.direct-contacts {
+  height: 200px;
+  background-color: white;
+  margin: 0.5em;
+  box-shadow: 0.04em 0.04em 0.2em black;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  font-size: 3em;
+  padding: 0.5em;
+}
+.c-icons {
+  font-size: 2em;
+  color: var(--fgA);
+}
+.direct-contacts > p {
+  font-family: monospace;
+}
+.hd {
   font-weight: bolder;
-  border: solid 6px orange;
-  padding: 1em;
 }
-#two{
-  border: solid 10px white;
-  width: max-content
+.c-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#three {
-  border: solid 6px orange;
-  width: max-content
+#askquestion {
+  padding: 1.5em;
+  background-color: var(--fgA);
+  border-radius: 7px;
+  font-weight: bolder;
 }
-#one, #two, #three {
-  border-radius: 50%;
+#askquestion:hover {
+  background-color: gray;
+  border: solid 1px var(--fgA);
+}
+.meetings {
+  width: 97%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  border: solid 1px;
+
+  display: flex;
+  justify-content: center;
+}
+.meeting, .consultation {
+  margin: 0.5em;
+  width: 50%;
+  height: 200px;
+  background-color: gray;
+  border-radius: 10px;
 }
