@@ -7,7 +7,7 @@ function Warehousing() {
     return (
         <div className="warehousing">
             <SlideShow images={[warehouse1, warehouse1]}>
-                <div>
+                <div style={{minHeight: "500px"}}>
                     <h1>Comprehensive Warehousing &<br/> Distribution Services</h1>
                     <div className="key-obligations">
                             <div className="h4"><span className="ticks"><GiCheckMark /></span> Efficient storage</div>

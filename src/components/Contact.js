@@ -2,7 +2,7 @@ import React from "react";
 import contact from "../assets/gallery/contacts/contact_bulb.png"
 import { TbPhoneCall } from 'react-icons/tb'
 import { ImOffice, ImWhatsapp } from 'react-icons/im'
-import { FcQuestions, FcFaq } from 'react-icons/fc'
+import { FcFaq } from 'react-icons/fc'
 import consult from "../assets/gallery/contacts/consultation.png"
 import meet from "../assets/gallery/contacts/googlemeet.png"
 import { GoArrowRight } from 'react-icons/go'

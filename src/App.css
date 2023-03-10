@@ -32,7 +32,8 @@ button {
   margin: 0em 0.95em 0.95em 0em;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(-270deg, var(--bgST), transparent);
+  background-color: white;
+  /* background-image: linear-gradient(-270deg, var(--bgST), transparent); */
 }
 .s-description {
   display: flex;
@@ -143,6 +144,9 @@ button {
 }
 
 @media (orientation: portrait) {
+  .a-top, .a-bottom {
+    display: none;
+  }
   .consultation {
     flex-direction: column;
   }
@@ -603,4 +607,109 @@ input, textarea {
 .arrow-R {
   color: orange;
   font-size: 1.2em;
+}
+
+/* Transportation */
+.transportation .float-description {
+  background-color: rgba(0, 0, 0, 0.672);
+}
+.float-description > .trans > h1 {
+  text-align: center;
+}
+
+.float-description > .trans {
+  text-align: left;
+}
+.trans h3, h4 {
+  font-weight: bolder;
+  padding: 1em;
+  font-size: 1.3em;
+
+}
+.arrow {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 4px orange;
+}
+.arrow > img {
+  position: absolute;
+  animation: shiftarrow 3s linear infinite;
+}
+@keyframes shiftarrow {
+  0%{
+    left: 0;
+  }
+  50%{
+    left: 200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+.additional {
+  background-color: rgba(0, 0, 0, 0.726);
+  height: 180px;
+  width: 200px;
+  position: absolute;
+}
+.a-top {
+  bottom: 0;
+}
+.a-bottom {
+  right: 0;
+}
+.categories {
+  position: relative;
+  margin: 1em;
+  display: flex;
+
+  background-size: cover;
+}
+.trans-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.trans-categories {
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0.04em 0.04em 0.2em black;
+  padding: 1em;
+  padding-bottom: 2em;
+  display: flex;
+  max-width: 350px;
+  min-width: 350px;
+  height: 220px;
+
+  position: absolute;
+}
+.trans-categories:hover{
+  z-index: 4;
+}
+.trans-categories > div {
+  width: 50%;
+}
+.trans-img {
+  display: flex;
+  align-items: center;
+}
+.trans-img > img {
+  width: 100%;
+}
+.trans-desc {
+  font-weight: bolder;
+}
+.engage-btn > button {
+  padding: 0.2em 2em;
+  background-color: var(--fgA);
+  font-size: 1.3em;
+  border-radius: 5px;
+}
+.subscribe-tra {
+  padding: 1em;
+}
+.subscribe-tra  h3 {
+  color: black !important;
 }
