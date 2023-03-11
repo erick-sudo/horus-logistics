@@ -12,7 +12,7 @@ function NavBar() {
   
 
     return (
-      <div className="nav">
+      <div className="nav" onMouseLeave={() => setShowNav(false)}>
         <Logo size={150} />
         {!showNav ? <div className="show-nav" onClick={() => setShowNav(true)}><FaHamburger /></div> : null}
         <div className="services-L">
@@ -20,7 +20,7 @@ function NavBar() {
           <NavLink to={"/deliveries"}>Deliveries</NavLink>
           <NavLink to={"/transportation"}>Transportation</NavLink>
           <NavLink to={"/warehousing"}>Ware Housing</NavLink>
-          <NavLink to={"/special"}>Special Equipment</NavLink>
+          <NavLink to={"/aboutus"}>About Us</NavLink>
           <NavLink to={"/contactus"}>Contact Us</NavLink>
         </div>
         { showNav ? <div className="services-P">
@@ -30,7 +30,6 @@ function NavBar() {
           <NavLink to={"/deliveries"}><GiDeliveryDrone /> Deliveries</NavLink>
           <NavLink to={"/transportation"}><MdEmojiTransportation /> Transportation</NavLink>
           <NavLink to={"/warehousing"}><FaWarehouse /> Ware Housing</NavLink>
-          <NavLink to={"/special"}><GiShieldBash /> Special Equipment</NavLink>
           <NavLink to={"/aboutus"}><IoPeopleCircleOutline /> About Us</NavLink>
           <NavLink to={"/contactus"}><MdOutlineConnectWithoutContact /> Contact Us</NavLink>
         </div> : null}

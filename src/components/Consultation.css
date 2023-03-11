@@ -1,0 +1,72 @@
+.const-form-wrapper{
+    z-index: 6;
+    position: fixed;
+    top: 0em;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    background-color: rgba(0, 0, 0, 0.61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.consultation-form {
+    background-color: whitesmoke;
+    max-width: 500px;
+    min-width: 400px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1em;
+}
+.consultation-form form {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.consultation-form > form  > div {
+    margin-top: 5px;
+    width: 100%;
+}
+.consultation-form > form input, textarea  {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0.04em 0.04em 0.2em black;
+    padding: 0.6em;
+}
+.in-row {
+    display: flex;
+    justify-content: space-between;
+}
+.in-row > div {
+    width: 45%;
+}
+.consultation-form > form > button {
+    background-color: red;
+    border-radius: 20px;
+    padding: 1em 2em;
+    margin-top: 1em;
+    font-weight: bolder;
+    color: white;
+}
+.consultation-form > form > button:hover {
+    background-color: gray;
+    color: black;
+}
+.labels {
+    background-color: whitesmoke;
+    text-align: left;
+    font-weight: bolder;
+}
+.close-form {
+    display: flex;
+    justify-content: right;
+}
+.ex {
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.ex:hover {
+    color: gray;
+}

@@ -1,0 +1,129 @@
+.about {
+    background-color: rgb(6, 6, 32);
+    color: white;
+    padding: 0.7em;
+}
+.about-title {
+    border-bottom: solid 1px orange;
+}
+.about-title > h1 {
+    font-size: 3em;
+}
+.highlight1 {
+    color: blue;
+}
+.highlight2 {
+    color: orange;
+}
+.highlight {
+    color: blue;
+}
+.highlight, .highlight1, .highlight2 {
+
+}
+.horus-description {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+.horus-logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.about-horus {
+    font-weight: bolder;
+    padding: 1em;
+}
+@media (orientation: landscape) {
+    .horus-description {
+        flex-direction: row;
+    }
+    .horus-description > div {
+        width: 40%;
+    }
+    .horus-logo > img {
+        height: 70vh;
+    }
+    .horus-logo {
+        border-right: solid 1px orange;
+    }
+}
+@media (orientation: portrait) {
+    .horus-description {
+        flex-direction: column;
+    }
+    .horus-description > div {
+        width: 100%;
+    }
+    .horus-logo > img {
+        height: 70vh;
+    }
+}
+
+.staff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: solid 1px orange;
+}
+.person {
+    max-width: 300px;
+    min-width: 300px;
+    margin: 1em;
+
+    background-color: rgb(71, 65, 65);
+}
+.fullname {
+    font-weight: bolder;
+    color: orange;
+
+}
+.position {
+    color: blue;
+    font-weight: bolder;
+}
+.person-desc {
+    text-align: left;
+    padding: 0.4em;
+}
+.dp > img{
+    height: 20vh;
+}
+li {
+    list-style-type: none;
+}
+.line-h {
+    border: solid 1px orange;
+    width: 50%;
+    margin: 5px auto;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: solid 1px orange;
+}
+.gallery > img {
+    display: block;
+    background-color: white;
+    margin: 0 0.5em 0.5em 0;
+}
+.investors-wrapper {
+    margin: 1em 0;
+}
+.investors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.inv-h > h2 {
+    color: blue;
+    font-size: 2.5em;
+}
+.inv-h {
+    display: flex;
+    align-items: center;
+}
