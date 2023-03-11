@@ -17,7 +17,7 @@ function NavBar() {
         {!showNav ? <div className="show-nav" onClick={() => setShowNav(true)}><FaHamburger /></div> : null}
         <div className="services-L">
           <NavLink to={"/"}>..<FaHome />..</NavLink>
-          <NavLink to={"/deliveries"}>Deliveries</NavLink>
+          {/* <NavLink to={"/deliveries"}>Deliveries</NavLink> */}
           <NavLink to={"/transportation"}>Transportation</NavLink>
           <NavLink to={"/warehousing"}>Ware Housing</NavLink>
           <NavLink to={"/aboutus"}>About Us</NavLink>
@@ -27,7 +27,7 @@ function NavBar() {
           <div className="close-services" onClick={() => setShowNav(false)}><FaWindowClose /></div>
           <Logo size={60} />
           <NavLink to={"/"}><FaHome /> Home</NavLink>
-          <NavLink to={"/deliveries"}><GiDeliveryDrone /> Deliveries</NavLink>
+          {/* <NavLink to={"/deliveries"}><GiDeliveryDrone /> Deliveries</NavLink> */}
           <NavLink to={"/transportation"}><MdEmojiTransportation /> Transportation</NavLink>
           <NavLink to={"/warehousing"}><FaWarehouse /> Ware Housing</NavLink>
           <NavLink to={"/aboutus"}><IoPeopleCircleOutline /> About Us</NavLink>
