@@ -24,7 +24,7 @@ button {
   flex-wrap: wrap;
 }
 .services-offered {
-  box-shadow: 0.2em 0.2em 0.2em black;
+  box-shadow: 0.2em 0.2em 0.2em blue;
   font-weight: bolder;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
@@ -236,7 +236,7 @@ button {
 }
 
 .p_w {
-  background: url("./assets/logistics1.png") black no-repeat right center;
+  background: url("./assets/logistics1.png") blue no-repeat right center;
   background-size: 200px;
 }
 
@@ -267,13 +267,21 @@ button {
   min-height: 500px;
 }
 /* Footer */
+.footer-wrapper {
+  background: url("./assets/gallery/connect.png") center no-repeat;
+  background-size: 200px;
+  color: white;
+  border: solid 1px transparent;
+}
 .footer {
-  background-color: rgba(0, 0, 0, 0.804);
+  background-color: rgb(10, 10, 80);
   margin-top: 0;
+  border: solid 1px transparent;
 }
 .footer-logo {
   display: flex;
   justify-content: right;
+  /* background-image: linear-gradient(90deg,transparent, rgba(245, 245, 245, 0.685)); */
 }
 .contacts-wrapper {
   display: flex;
@@ -287,22 +295,14 @@ button {
   display: flex;
   align-items: center;
   padding: 5px;
-  /* color: blue; */
 }
 .contacts > div > a {
-  color: gray;
+  color: white;
   font-weight: bolder;
   padding-left: 5px;
 }
-.footer-wrapper {
-  background: url("./assets/gallery/connect.png") black center no-repeat;
-  background-size: 200px;
-  color: white;
-  border: solid 1px transparent;
-}
 .footer > p {
-  font-weight: bolder;
-  color: gray;
+  color: white;
 }
 b{
   color: orange;
@@ -320,10 +320,10 @@ em {
   margin: 10px;
   text-decoration: none;
   font-size: 1.4em;
-  color: blue;
+  color: orange;
 }
 .social a:hover {
-  color: orange;
+  color: white;
 }
 /* Subscribe */
 .subscribe-wrapper {
@@ -335,7 +335,7 @@ em {
   display: flex;
   border-radius: 10px;
   overflow: hidden;
-  background-color: black;
+  background-color: rgb(21, 21, 73);
   margin: 5px 10px;
 }
 .subscribe > input {
@@ -354,8 +354,8 @@ em {
   cursor: pointer;
 }
 .subscribe > button:hover {
-  background-color: blue;
-  color: var(--fgA);
+  background-color: darkorange;
+  color: white
 }
 /* Home */
 .home {
@@ -431,7 +431,7 @@ em {
   right: 0;
   left: 0;
   color: white;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(23, 82, 158, 0.45);
   padding-bottom: 1em;
 }
 .float-description h1 {
@@ -611,7 +611,7 @@ input, textarea {
 
 /* Transportation */
 .transportation .float-description {
-  background-color: rgba(0, 0, 0, 0.672);
+  background-color: rgba(19, 19, 145, 0.658);
 }
 .float-description > .trans > h1 {
   text-align: center;
@@ -649,7 +649,7 @@ input, textarea {
   }
 }
 .additional {
-  background-color: rgba(0, 0, 0, 0.726);
+  background-color: rgba(19, 19, 145, 0.658);
   height: 180px;
   width: 200px;
   position: absolute;

@@ -32,7 +32,7 @@ function Transportation() {
 
     useEffect(() => {
         container.current.style.height = (refs.map(div => div.current.offsetHeight).reduce((a,b) => a + b))*0.9+"px"
-        let [top,left] = [0,0]
+        let top = 0
         const w = refs[0].current.offsetWidth
         const space = container.current.offsetWidth-w
         const interval = space/(refs.length-1)

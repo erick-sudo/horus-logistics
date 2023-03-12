@@ -47,9 +47,11 @@ function About() {
                 <div className="horus-description">
                     <div className="horus-logo"><img src={aboutlogo} alt="Horus Logistics" /></div>
                     <div className="about-horus">
-                        <p>At Apptopia, we want to solve the biggest problem in mobile: everyone is guessing.</p>
-                        <p>Publishers need to know what apps to build, how to monetize them, and where to price them. Advertisers and brands need to identify their target users, and determine where to allocate resources in order to reach them most effectively. Investors need to know which apps and genres are growing the quickest, and where users are really spending their time (and money).</p>
-                        <p>In business, we need data to make informed decisions. Apptopia provides the most actionable mobile app insights in the industry. We aim to make this data available to as many people as possible.</p>
+                        <p>We specialize in commodities trading company based out of Nairobi, Kenya.</p>
+                        <p>We predominantly deal with Agricultural products, such as fertilizers, wheat, maize, sugar and the like.</p>
+                        <p>Our model is more of first-level contact with large-scale aggregators, factories/producers, or dealers and avail the same to a largely corporate buyers who may range from Governmental departmental buyers, large NGOs in relief efforts, importers, distributors, wholesalers and large retailers.</p>
+                        <p>We also support small-holder farmers in niche-markets to enhance their capacities both technical and financial, whom we work with via a network of aggregators to acquire their produce and sell it to large processors, local and international.</p>
+                        <p>We are active either directly, or in partnership with other regional partners</p>
                     </div>
                 </div>
             </div>
